@@ -9,7 +9,7 @@
 #importing all required modules fr66om Python
 #=======================================================================================================================
 #=======================================================================================================================
-import tkinter as tk                 
+import tkinter as tk                
 import numpy as np
 import matplotlib.pyplot
 matplotlib.use('TkAgg')
@@ -116,7 +116,7 @@ def NotNow():
     Fenster = tk.Toplevel()                                                         
     Fenster.title("Function will follow soon")                         
    
-    HammerDuck_image       = tk.PhotoImage(file = r"IMAGES\Hammerduck.png")       #Image as background in toplevel
+    HammerDuck_image       = tk.PhotoImage(file = "IMAGES/Hammerduck.png")       #Image as background in toplevel
     background_label       = tk.Label(Fenster, image=HammerDuck_image)            #Image as background in toplevel
     background_label.image = HammerDuck_image                                     #Image as background in toplevel
     w                      = HammerDuck_image.width()                             #Image as background in toplevel
@@ -141,8 +141,8 @@ def NotNow():
 
 root = Tk()
 root.title("Polarographica")     
-root.iconbitmap(r"IMAGES\PG.ico")                    
-BGRimage = PhotoImage(file = r"IMAGES\BGRMAIN2.png")
+icon = PhotoImage(file="IMAGES/PG.png")    
+BGRimage = PhotoImage(file = "IMAGES/BGRMAIN2.png")
 w        = BGRimage.width()
 h        = BGRimage.height()
 root.geometry('%dx%d+0+0' % (w,h))
@@ -178,15 +178,15 @@ filemenu.add_command(label="Open Impedance/Nyquist for DRT analysis", command=Im
 #=================================================================================
 #=================================================================================
 
-RSREVphoto        = PhotoImage(file = r"IMAGES\RSrev.png")
+RSREVphoto        = PhotoImage(file = "IMAGES/RSrev.png")
 RSREVphotoimage   = RSREVphoto.subsample(2, 2) 
-RSIRRphoto        = PhotoImage(file = r"IMAGES\RSirr.png")
+RSIRRphoto        = PhotoImage(file = "IMAGES/RSirr.png")
 RSIRRphotoimage   = RSIRRphoto.subsample(2, 2) 
-KLLSVphoto        = PhotoImage(file = r"IMAGES\KL_LSV.png")
+KLLSVphoto        = PhotoImage(file = "IMAGES/KL_LSV.png")
 KLLSVphotoimage   = KLLSVphoto.subsample(2, 2) 
-TAFELphoto        = PhotoImage(file = r"IMAGES\TAFEL.png")
+TAFELphoto        = PhotoImage(file = "IMAGES/TAFEL.png")
 TAFELphotoimage   = TAFELphoto.subsample(2, 2) 
-COTphoto          = PhotoImage(file = r"IMAGES\COT.png")
+COTphoto          = PhotoImage(file = "IMAGES/COT.png")
 COTphotoimage     = COTphoto.subsample(2, 2) 
 
 
@@ -213,7 +213,7 @@ menu.add_cascade(label="Voltamperometric Simulators", menu=SimVoltamperometric)
 #Cyclic Voltammetry simulators
 #----------------------------
 CVSimulators   = Menu(SimVoltamperometric)
-CVphoto        = PhotoImage(file = r"IMAGES\CV.png")
+CVphoto        = PhotoImage(file = "IMAGES/CV.png")
 CVphotoimage   = CVphoto.subsample(2, 2) 
 CVSimulators.add_command(label="Planar Semi-Infinite Diffusion CV Simulator",               command=Semi_Inf_Planar)
 CVSimulators.add_command(label="Planar Finite Reflective Diffusion CV Simulator",           command=Finit_Planar)
@@ -234,7 +234,7 @@ SimVoltamperometric.add_cascade(label = 'Cyclic Voltammetry', menu = CVSimulator
 #----------------------------
 #AC-Cyclic Voltammetry Simulators
 #----------------------------
-ACCVphoto        = PhotoImage(file = r"IMAGES\ACCV.png")
+ACCVphoto        = PhotoImage(file = "IMAGES/ACCV.png")
 ACCVphotoimage   = ACCVphoto.subsample(2, 2) 
 ACCVSimulators   = Menu(SimVoltamperometric)
 ACCVSimulators.add_command(label="Planar Semi-Infinite Diffusion AC-CV Simulator", command=AC_Semi_Inf_Planar)
@@ -256,7 +256,7 @@ SimVoltamperometric.add_cascade(label = 'AC-Cyclic Voltammetry', menu = ACCVSimu
 #----------------------------
 #Large Sine Amplitude Cyclic Voltammetry simulators
 #----------------------------
-LSACVphoto         = PhotoImage(file = r"IMAGES\LSACV.png")
+LSACVphoto         = PhotoImage(file = "IMAGES/LSACV.png")
 LSACVphotoimage    = LSACVphoto.subsample(2, 2) 
 LSA_CVSimulators   = Menu(SimVoltamperometric)
 LSA_CVSimulators.add_command(label="Planar Semi-Infinite Diffusion LSA-CV Simulator",               command=LSA_Semi_Inf_Planar)
@@ -279,7 +279,7 @@ SimVoltamperometric.add_cascade(label = 'Large Sine Amplitude Voltammetry', menu
 #n-Step Chronoamperometry Simulators
 #----------------------------
 CASimulators   = Menu(SimVoltamperometric)
-CAphoto        = PhotoImage(file = r"IMAGES\CA.png")
+CAphoto        = PhotoImage(file = "IMAGES/CA.png")
 CAphotoimage   = CAphoto.subsample(2, 2) 
 CASimulators.add_command(label="Planar Semi-Infinite Diffusion n-Step CA Simulator",               command=NST_Semi_Inf_Planar)
 CASimulators.add_command(label="Planar Finite Reflective Diffusion n-Step CA Simulator",           command=NST_Finit_Planar)
@@ -303,7 +303,7 @@ SimVoltamperometric.add_cascade(label = 'n-Step Chronoamperometry', menu = CASim
 
 
 STC_CVSimulators   = Menu(SimVoltamperometric)
-STCVphoto          = PhotoImage(file = r"IMAGES\STCV.png")
+STCVphoto          = PhotoImage(file = "IMAGES/STCV.png")
 STCVphotoimage     = STCVphoto.subsample(2, 2) 
 STC_CVSimulators.add_command(label="Planar Semi-Infinite Diffusion Staircase-CV Simulator",               command=STC_Semi_Inf_Planar)
 STC_CVSimulators.add_command(label="Planar Finite Reflective Diffusion Staircase-CV Simulator",           command=STC_Finit_Planar)
@@ -327,7 +327,7 @@ SimVoltamperometric.add_cascade(label = 'Staircase Cyclic Voltammetry', menu = S
 #RIS_Cyclic Voltammetry simulators
 #----------------------------
 RIS_CVSimulators   = Menu(SimVoltamperometric)
-RISCVphoto         = PhotoImage(file = r"IMAGES\RISCV.png")
+RISCVphoto         = PhotoImage(file = "IMAGES/RISCV.png")
 RISCVphotoimage    = RISCVphoto.subsample(2, 2) 
 RIS_CVSimulators.add_command(label="Planar Semi-Infinite Diffusion RIS-CV Simulator",               command=RIS_Semi_Inf_Planar)
 RIS_CVSimulators.add_command(label="Planar Finite Reflective Diffusion RIS-CV Simulator",           command=RIS_Finit_Planar)
@@ -361,7 +361,7 @@ menu.add_cascade(label="Voltamperometric Evaluation", menu=EvalVoltamperometric)
 #Cyclic Voltammetry fitters
 #----------------------------
 CVFitters         = Menu(menu)
-CVFITphoto        = PhotoImage(file = r"IMAGES\CVFIT.png")
+CVFITphoto        = PhotoImage(file = "IMAGES/CVFIT.png")
 CVFITphotoimage   = CVFITphoto.subsample(2, 2) 
 CVFitters.add_command(label="Planar Semi-Infinite Diffusion CV Fitter", command=Semi_Inf_Planar_FITTER)
 CVFitters.add_command(label="Planar Finite Reflective Diffusion CV Fitter", command=Finit_Planar_FITTER)
@@ -382,7 +382,7 @@ EvalVoltamperometric.add_cascade(label = 'Cyclic Voltammetry Fitters', menu = CV
 #----------------------------
 #ACCV-Fourier-Transformer
 #----------------------------
-ACCVFFTphoto        = PhotoImage(file = r"IMAGES\ACCVFFT.png")
+ACCVFFTphoto        = PhotoImage(file = "IMAGES/ACCVFFT.png")
 ACCVFFTphotoimage   = ACCVFFTphoto.subsample(2, 2) 
 EvalVoltamperometric.add_command(label = 'FFT-ACCV-Analysis', command = FFTACCV_Experimental, image=ACCVFFTphotoimage,  compound=tk.LEFT)
 
@@ -390,7 +390,7 @@ EvalVoltamperometric.add_command(label = 'FFT-ACCV-Analysis', command = FFTACCV_
 #n-Step Chronoamperometry fitters
 #----------------------------
 CAFitters   = Menu(menu)
-CAFITphoto        = PhotoImage(file = r"IMAGES\nSTEPCA.png")
+CAFITphoto        = PhotoImage(file = "IMAGES/nSTEPCA.png")
 CAFITphotoimage   = CAFITphoto.subsample(2, 2) 
 CAFitters.add_command(label="Planar Semi-Infinite Diffusion n-Step CA Fitter",               command=NST_Semi_Inf_Planar_FITTER)
 CAFitters.add_command(label="Planar Finite Diffusion n-Step CA Fitter",                      command=NST_Finit_Planar_FITTER)
@@ -412,7 +412,7 @@ EvalVoltamperometric.add_cascade(label = 'n-Step Chronoamperometry Fitters', men
 #Large Sine Amplitude Cyclic Voltammetry simulators
 #----------------------------
 LSA_CVFitters        = Menu(menu)
-LSACVFITphoto        = PhotoImage(file = r"IMAGES\LSACVFIT.png")
+LSACVFITphoto        = PhotoImage(file = "IMAGES/LSACVFIT.png")
 LSACVFITphotoimage   = LSACVFITphoto.subsample(2, 2) 
 LSA_CVFitters.add_command(label="Planar Semi-Infinite Diffusion LSA-CV Fitter",               command=LSA_Semi_Inf_Planar_FITTER)
 LSA_CVFitters.add_command(label="Planar Finite Reflective Diffusion LSA-CV Fitter",           command=LSA_Finit_Planar_FITTER)
@@ -435,7 +435,7 @@ EvalVoltamperometric.add_cascade(label = 'Large Sine Amplitude Voltammetry Fitte
 #Staircase Cyclic Voltammetry simulators
 #----------------------------
 STC_CVFitters       = Menu(menu)
-STCVFITphoto        = PhotoImage(file = r"IMAGES\STCVFIT.png")
+STCVFITphoto        = PhotoImage(file = "IMAGES/STCVFIT.png")
 STCVFITphotoimage   = STCVFITphoto.subsample(2, 2) 
 STC_CVFitters.add_command(label="Planar Semi-Infinite Diffusion STC-CV Fitter",               command=STC_Semi_Inf_Planar_FITTER)
 STC_CVFitters.add_command(label="Planar Finite Reflective Diffusion STC-CV Fitter",           command=STC_Finit_Planar_FITTER)
@@ -471,7 +471,7 @@ Impedance_Techniques = Menu(menu)
 menu.add_cascade(label="Impedance Techniques",  menu=Impedance_Techniques)
 
 PEIS_simulators    = Menu(menu)
-EISSIMphoto        = PhotoImage(file = r"IMAGES\EISSIM.png")
+EISSIMphoto        = PhotoImage(file = "IMAGES/EISSIM.png")
 EISSIMphotoimage   = EISSIMphoto.subsample(2, 2) 
 PEIS_simulators.add_command(label="Planar Semi-Infinite Diffusion Impedance Simulator", command=Semi_Inf_Plan_Imp_Sim)
 PEIS_simulators.add_command(label="Planar Finite Transmissive Diffusion Impedance Simulator", command=Fin_Plan_Trans_Imp_Sim)
@@ -482,7 +482,7 @@ PEIS_simulators.add_command(label="Spherical Internal Finite Diffusion Impedance
 Impedance_Techniques.add_cascade(label = 'Potentiostatic EIS Simulators', menu = PEIS_simulators, image=EISSIMphotoimage,  compound=tk.LEFT)
 
 PEIS_fitters   = Menu(menu)
-EISFITphoto        = PhotoImage(file = r"IMAGES\EISFIT.png")
+EISFITphoto        = PhotoImage(file = "IMAGES/EISFIT.png")
 EISFITphotoimage   = EISFITphoto.subsample(2, 2) 
 PEIS_fitters.add_command(label="Planar Semi-Infinite Diffusion Impedance Fitter", command=Semi_Inf_Plan_Imp_Fit)
 PEIS_fitters.add_command(label="Planar Finite Transmissive Diffusion Impedance Fitter", command=Fin_Plan_Trans_Imp_Fit)
@@ -493,7 +493,7 @@ PEIS_fitters.add_command(label="Spherical Internal Finite Diffusion Impedance Fi
 Impedance_Techniques.add_cascade(label = 'Potentiostatic EIS Fitters', menu = PEIS_fitters, image=EISFITphotoimage,  compound=tk.LEFT)
 
 DRT_Transformation  = Menu(menu)
-DRTphoto            = PhotoImage(file = r"IMAGES\DRT.png")
+DRTphoto            = PhotoImage(file = "IMAGES/DRT.png")
 DRTphotoimage       = DRTphoto.subsample(2, 2) 
 DRT_Transformation.add_command(label="DRT-Tools-NNLS-DRT", command=DRT_Tools_NNLS_DRT)
 DRT_Transformation.add_command(label="Native spike-DRT", command=Native_NNLS_DRT)

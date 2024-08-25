@@ -28,7 +28,7 @@ from scipy.optimize                    import nnls
 from scipy.linalg                      import toeplitz
 from scipy.special                     import kv, iv, gamma
 from scipy.integrate                   import quad
-from scipy                             import fft, ifft
+from scipy                             import fft
 from scipy.signal                      import hilbert
 from cmath                             import *
 from math                              import ceil,floor
