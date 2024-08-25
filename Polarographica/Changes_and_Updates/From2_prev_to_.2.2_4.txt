@@ -1,0 +1,13 @@
+#########################################################################################################
+#   The following changes are performed form Polarographica_2.2.2_2 to Polarographica_2.2.2_4
+#########################################################################################################
+
+
+Changes in DRT-module: 	Radial basis functionn of the Havriliak-Negami-type has been included
+			Axis annotations have been changed (there was an error in the dln(tau)-scale
+			Reloaded EIS-sectra are displayed in equal aspect ratio
+			EIS-simulators and fitters display data in equal aspect ratio
+			Loading data in EIS-fitters was changed to have a skip_footer instead of read_to_row
+
+PolArStat:		A detailed guide how to assemble the PolArStat on a breadboard has been included
+		
