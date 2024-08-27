@@ -1,3 +1,5 @@
+Fork of Polarographica for running on Linux.
+
 $\bf{Polarographica\hspace{2mm}program}$
 
 Polarographica is an open-source program for simulating and evaluating electroanalytical experiments. Initially designed for the simulation of cyclic voltammetry at marcoporous electrodes, Polarographica is steadily expanding. 

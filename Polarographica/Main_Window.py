@@ -141,7 +141,7 @@ def NotNow():
 
 root = Tk()
 root.title("Polarographica")     
-icon = PhotoImage(file="IMAGES/PG.png")    
+icon = PhotoImage(file="IMAGES/PG.ico")    
 BGRimage = PhotoImage(file = "IMAGES/BGRMAIN2.png")
 w        = BGRimage.width()
 h        = BGRimage.height()
